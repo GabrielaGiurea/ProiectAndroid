@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".setupProfile"></activity>
+        <activity android:name=".SportActivity"></activity>
+        <activity android:name=".SleepActivity" />
+        <activity android:name=".MealsActivity" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
