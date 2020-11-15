@@ -6,4 +6,102 @@
     android:layout_height="match_parent"
     tools:context=".SleepActivity">
 
+    <SeekBar
+        android:id="@+id/seekBar5"
+        android:layout_width="128dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:progress="30"
+        app:layout_constraintStart_toEndOf="@+id/seekBar3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="128dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:progress="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="196dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/slumber" />
+
+    <TextView
+        android:id="@+id/tvSleep1"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="70dp"
+        android:text="Adormire"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar3" />
+
+    <TextView
+        android:id="@+id/tvSleep3"
+        android:layout_width="96dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="55dp"
+        android:text="Somn REM"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvSleep2"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar4" />
+
+    <TextView
+        android:id="@+id/tvSleep"
+        android:layout_width="107dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="90dp"
+        android:text="Somn usor"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvSleep1"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar5" />
+
+    <TextView
+        android:id="@+id/tvSleep2"
+        android:layout_width="128dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="60dp"
+        android:text="Somn profund"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="128dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:progress="20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSleep1" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="128dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:progress="40"
+        app:layout_constraintStart_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/tvSleep" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

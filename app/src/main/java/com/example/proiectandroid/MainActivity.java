@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnSleep = findViewById(R.id.btnSleep);
-        btnMeals.setOnClickListener(new View.OnClickListener() {
+        btnSleep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SleepActivity.class);

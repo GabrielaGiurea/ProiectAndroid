@@ -6,4 +6,217 @@
     android:layout_height="match_parent"
     tools:context=".MealsActivity">
 
+    <TextView
+        android:id="@+id/tvDinner"
+        android:layout_width="92dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:text="Cina"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonDinner"
+        app:layout_constraintTop_toBottomOf="@+id/etSnacksKcal" />
+
+    <EditText
+        android:id="@+id/etDinnerKcal"
+        android:layout_width="405dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="756 - 900 Kcal"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddDinner" />
+
+    <Button
+        android:id="@+id/btnAddLunch"
+        android:layout_width="57dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:background="#FFFFFF"
+        android:text="+"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+    <Button
+        android:id="@+id/btnAddSnacks"
+        android:layout_width="57dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:background="#FFFFFF"
+        android:text="+"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLunchKcal" />
+
+    <Button
+        android:id="@+id/btnAddDinner"
+        android:layout_width="57dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:background="#FFFFFF"
+        android:text="+"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSnacksKcal" />
+
+    <TextView
+        android:id="@+id/tvSnacks"
+        android:layout_width="92dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Gustari"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonSnack"
+        app:layout_constraintTop_toBottomOf="@+id/etLunchKcal" />
+
+    <EditText
+        android:id="@+id/etLunchKcal"
+        android:layout_width="405dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="811 - 1082 Kcal"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddLunch" />
+
+    <ImageButton
+        android:id="@+id/imageButtonLunch"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
+        app:srcCompat="@drawable/soup" />
+
+    <TextView
+        android:id="@+id/tvLunch"
+        android:layout_width="79dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Pranz"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonLunch"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+    <EditText
+        android:id="@+id/etSnacksKcal"
+        android:layout_width="405dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="0 - 541 Kcal"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddSnacks" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="92dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Mic dejun"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonBreakfast2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="405dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="676 - 946 Kcal"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddBreakfast" />
+
+    <ImageButton
+        android:id="@+id/imageButtonBreakfast2"
+        android:layout_width="46dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/coffee"
+        android:tint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coffee" />
+
+    <Button
+        android:id="@+id/btnAddBreakfast"
+        android:layout_width="57dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:background="#FFFFFF"
+        android:text="+"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSnack"
+        android:layout_width="49dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLunchKcal"
+        app:srcCompat="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDinner"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSnacksKcal"
+        app:srcCompat="@drawable/chicken" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
