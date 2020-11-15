@@ -13,7 +13,11 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String SETUP_PROFILE = "setupProfile";
 
+    public static final String SHOW_PROFILE = "showProfile";
+
     public static final int REQUEST_CODE = 200;
+
+    private Profile profile;
 
     private Button btnProfile;
 
@@ -30,17 +34,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         // if no profile then
-        Log.e("msg", "opened");
-        Intent intent = new Intent(this, setupProfile.class);
-        startActivityForResult(intent, REQUEST_CODE);
+        if(profile==null) {
+            Intent intent = new Intent(this, setupProfile.class);
+            startActivityForResult(intent, REQUEST_CODE);
+        }
+
 
         btnProfile = findViewById(R.id.btnProfile);
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Log.e("msg", "click");
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                startActivity(intent);
+                if(profile != null) {
+                    intent.putExtra(SHOW_PROFILE, profile);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -79,10 +88,7 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode) {
             case 200:
                 if (resultCode == 210) {
-                    Profile profile = (Profile) data.getSerializableExtra(SETUP_PROFILE);
-
-                    Log.e("log", profile.toString());
-
+                    profile = (Profile) data.getSerializableExtra(SETUP_PROFILE);
                 }
 
                 //mPresenter.getBookMixAToc(bookId, "chapters");
