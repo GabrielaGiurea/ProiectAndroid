@@ -22,7 +22,7 @@
         android:id="@+id/setupProfileGenreTextView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Inaltime (cm)"
+        android:text="@string/profile_height"
         app:layout_constraintBottom_toTopOf="@+id/setupProfileHeight"
         app:layout_constraintStart_toStartOf="@+id/setupProfileHeight" />
 
@@ -42,7 +42,7 @@
         android:id="@+id/setupProfileGenreTextView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Greutate (kg)"
+        android:text="@string/profile_weight"
         app:layout_constraintBottom_toTopOf="@+id/setupProfileWeight"
         app:layout_constraintStart_toStartOf="@+id/setupProfileWeight" />
 
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Introduceti datele dvs."
+        android:text="@string/setup_profile_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -63,7 +63,6 @@
         android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nume Prenume"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.744"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,8 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.731"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setupProfileName"
-        tools:text="dd/mm/yyyy" />
+        app:layout_constraintTop_toBottomOf="@+id/setupProfileName" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -117,7 +115,7 @@
         android:id="@+id/setupProfileGenreTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gen"
+        android:text="@string/profile_gen"
         app:layout_constraintBottom_toTopOf="@+id/setupProfileGenre"
         app:layout_constraintStart_toStartOf="@+id/setupProfileGenre" />
 
@@ -137,7 +135,7 @@
         android:id="@+id/setupProfileGenreTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Varsta"
+        android:text="@string/profile_age"
         app:layout_constraintBottom_toTopOf="@+id/setupProfileAge"
         app:layout_constraintStart_toStartOf="@+id/setupProfileAge" />
 
@@ -171,5 +169,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/setupProfileWeight"
         app:srcCompat="@drawable/weight" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_name"
+        app:layout_constraintBottom_toTopOf="@+id/setupProfileName"
+        app:layout_constraintStart_toStartOf="@+id/setupProfileName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_bdate"
+        app:layout_constraintBottom_toTopOf="@+id/setupProfileBDate"
+        app:layout_constraintStart_toStartOf="@+id/setupProfileBDate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

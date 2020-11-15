@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">ProiectAndroid</string>
+    <string name="profile_name">Nume</string>
+    <string name="profile_bdate">Data Nasterii</string>
+    <string name="profile_age">Varsta</string>
+    <string name="profile_gen">Gen</string>
+    <string name="profile_weight">Greutate (kg)</string>
+    <string name="profile_height">Inaltime (cm)</string>
+    <string name="setup_profile_title">Introduceti Datele Dvs.</string>
+    <string name="menu_item_profile">Profil</string>
+    <string name="menu_item_aliments">Alimentare</string>
+    <string name="menu_item_sleep">Somn</string>
+    <string name="menu_item_PA">Activitate fizica</string>
+
+
+
 
     <string-array name="profileGenres">
         <item>Masculin</item>
