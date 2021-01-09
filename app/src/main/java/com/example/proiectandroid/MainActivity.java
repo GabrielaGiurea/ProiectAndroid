@@ -1,12 +1,16 @@
 package com.example.proiectandroid;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -15,6 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+
+    private TextView headline;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menuItemProfile:
-                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                startActivityForResult(new Intent(MainActivity.this, ProfileActivity.class), 200);
                 break;
             case R.id.menuItemAliments:
                 startActivity(new Intent(MainActivity.this, MealsActivity.class));
@@ -48,6 +54,19 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode != RESULT_CANCELED) {
+            if(requestCode == 200) {
+                Profile profile = (Profile) data.getExtras().getSerializable("profile");
+                headline = findViewById(R.id.mainHeadline);
+                headline.setText("Salut, " + profile.getFullName());
+            }
+        }
+
     }
 
     private void userLogOut() {
