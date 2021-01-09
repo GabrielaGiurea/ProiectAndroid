@@ -8,161 +8,177 @@
 
     <TextView
         android:id="@+id/tvBirthDate"
-        android:layout_width="114dp"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
         android:layout_marginTop="40dp"
         android:fontFamily="sans-serif"
+        android:gravity="start"
         android:text="@string/profile_bdate"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
     <TextView
         android:id="@+id/tvGendre"
-        android:layout_width="114dp"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
         android:layout_marginTop="40dp"
         android:fontFamily="sans-serif"
+        android:gravity="start"
         android:text="@string/profile_gen"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvBirthDate"
         app:layout_constraintTop_toBottomOf="@+id/tvBirthDate" />
 
     <TextView
         android:id="@+id/tvAge"
-        android:layout_width="114dp"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
         android:layout_marginTop="40dp"
         android:fontFamily="sans-serif"
+        android:gravity="start"
         android:text="@string/profile_age"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvGendre"
         app:layout_constraintTop_toBottomOf="@+id/tvGendre" />
 
     <TextView
         android:id="@+id/tvWeight"
-        android:layout_width="114dp"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
         android:layout_marginTop="40dp"
         android:fontFamily="sans-serif"
+        android:gravity="start"
         android:text="@string/profile_weight"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvAge"
         app:layout_constraintTop_toBottomOf="@+id/tvAge" />
 
     <TextView
         android:id="@+id/tvHeight"
-        android:layout_width="114dp"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
         android:layout_marginTop="40dp"
         android:fontFamily="sans-serif"
+        android:gravity="start"
         android:text="@string/profile_height"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvWeight"
         app:layout_constraintTop_toBottomOf="@+id/tvWeight" />
 
     <TextView
         android:id="@+id/tvName"
-        android:layout_width="114dp"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
         android:layout_marginTop="40dp"
         android:fontFamily="sans-serif"
+        android:gravity="start"
         android:text="@string/profile_name"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/profileName"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/profileName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:id="@+id/profileAge"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="@string/profile_loading"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="234dp" />
+
+    <EditText
+        android:id="@+id/profileHeight"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/profile_loading"
+        app:layout_constraintEnd_toEndOf="@+id/profileWeight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profileWeight"
+        app:layout_constraintTop_toBottomOf="@+id/profileWeight" />
+
+    <EditText
+        android:id="@+id/profileName"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/profile_loading"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tvName"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/profileHeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/tvHeight"
-        app:layout_constraintTop_toBottomOf="@+id/profileWeight" />
-
-    <EditText
         android:id="@+id/profileWeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/tvWeight"
+        android:text="@string/profile_loading"
+        app:layout_constraintEnd_toEndOf="@+id/profileAge"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profileAge"
         app:layout_constraintTop_toBottomOf="@+id/profileAge" />
 
     <EditText
-        android:id="@+id/profileAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/tvAge"
-        app:layout_constraintTop_toBottomOf="@+id/profileGenre" />
-
-    <EditText
-        android:id="@+id/profileGenre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/tvGendre"
-        app:layout_constraintTop_toBottomOf="@+id/profileBDate" />
-
-    <EditText
         android:id="@+id/profileBDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/profile_loading"
+        app:layout_constraintEnd_toEndOf="@+id/profileName"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tvBirthDate"
+        app:layout_constraintStart_toStartOf="@+id/profileName"
         app:layout_constraintTop_toBottomOf="@+id/profileName" />
+
+    <Button
+        android:id="@+id/profileUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/profile_update"
+        app:layout_constraintEnd_toEndOf="@+id/profileHeight"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/profileHeight"
+        app:layout_constraintTop_toBottomOf="@+id/profileHeight" />
+
+    <Spinner
+        android:id="@+id/profileGenre"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/profileBDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profileBDate"
+        app:layout_constraintTop_toBottomOf="@+id/profileBDate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

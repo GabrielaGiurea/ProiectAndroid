@@ -8,21 +8,31 @@ import java.util.Date;
 enum Gen {MASCULIN, FEMININ}
 
 public class Profile implements Serializable {
+    private String email;
     private String fullName;
     private Date bDate;
     private Gen gen;
     private int Age;
     private float Weight;
     private float Height;
+    private String uuid;
 
-    public Profile(String fullName, Date bDate, Gen gen, int age, float weight, float height) {
+    public Profile() {}
+
+    public Profile(String email, String fullName, Date bDate, Gen gen, int age, float weight, float height, String uuid) {
+        this.email = email;
         this.fullName = fullName;
         this.bDate = bDate;
         this.gen = gen;
         Age = age;
         Weight = weight;
         Height = height;
+        this.uuid = uuid;
     }
+
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
 
     public String getFullName() {
         return fullName;
@@ -46,6 +56,14 @@ public class Profile implements Serializable {
 
     public void setGen(Gen gen) {
         this.gen = gen;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     public int getAge() {
@@ -79,6 +97,7 @@ public class Profile implements Serializable {
                 ", bDate=" + bDate +
                 ", gen='" + gen + '\'' +
                 ", Age=" + Age +
+                ", Uuid=" + uuid +
                 ", Weight=" + Weight +
                 ", Height=" + Height +
                 '}';
