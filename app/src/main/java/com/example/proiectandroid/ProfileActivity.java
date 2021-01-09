@@ -45,8 +45,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private Button profileUpdate;
     private final String DATE_FORMAT = "dd/MM/yyyy";
 
-    public ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-            R.array.profileGenres, R.layout.support_simple_spinner_dropdown_item);
+    public ArrayAdapter<CharSequence> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +65,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         profileUpdate = (Button) findViewById(R.id.profileUpdate);
         profileUpdate.setOnClickListener(this);
 
-        spinnerGen = findViewById(R.id.setupProfileGenre);
+        spinnerGen = findViewById(R.id.profileGenre);
+        adapter = ArrayAdapter.createFromResource(this,
+                R.array.profileGenres, R.layout.support_simple_spinner_dropdown_item);
         spinnerGen.setAdapter(adapter);
 
         getCurrentUserProfileInfo();
@@ -91,8 +92,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 profileName.setText(profile.getFullName());
                 profileBDate.setText(new SimpleDateFormat(DATE_FORMAT, Locale.US).format(profile.getbDate()));
                 profileAge.setText(String.valueOf(profile.getAge()));
-//                spinnerGen.setSelection(adapter.getPosition(profile.getGen().toString()));
-//                profileGenre.setText(String.valueOf(Gen.valueOf(profile.getGen().toString().toUpperCase())));
+                spinnerGen.setSelection(getIndex(spinnerGen, profile.getGen().toString()));
                 profileWeight.setText(String.valueOf(profile.getWeight()));
                 profileHeight.setText(String.valueOf(profile.getHeight()));
             }
@@ -114,8 +114,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         profile.setFullName(profileName.getText().toString());
         profile.setAge(Integer.parseInt(profileAge.getText().toString()));
         profile.setbDate(new Date(profileBDate.getText().toString()));
-//        profile.setGen(Gen.valueOf(profile.getGen().toString().toUpperCase()));
-        myRef.child(userId).setValue(Profile.class).addOnSuccessListener(new OnSuccessListener<Void>() {
+        profile.setGen(Gen.valueOf(spinnerGen.getSelectedItem().toString().toUpperCase()));
+        profile.setHeight(Float.parseFloat(profileHeight.getText().toString()));
+        profile.setWeight(Float.parseFloat(profileWeight.getText().toString()));
+
+        myRef.child(userId).setValue(profile).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(ProfileActivity.this, "Profilul a fost actualizat cu succes!", Toast.LENGTH_LONG).show();
@@ -126,5 +129,14 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 Toast.makeText(ProfileActivity.this, "Acutalizarea profilului a esuat", Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    private int getIndex(Spinner spinner, String myString){
+        for (int i=0;i<spinner.getCount();i++){
+            if (spinner.getItemAtPosition(i).toString().equalsIgnoreCase(myString)){
+                return i;
+            }
+        }
+        return 0;
     }
 }
