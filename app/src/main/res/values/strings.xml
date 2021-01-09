@@ -20,10 +20,18 @@
     <string name="start_sub_title">Aplicatie mobila pentru monitorizarea activitatilor personale (greutate, ore, durate si continut mese, efort zilnic depus, etc...)</string>
     <string name="start_register">Crează Cont</string>
     <string name="start_login">Conectează-te</string>
-
+    <string name="meals_subTitle">Introdu nr. de kcal pe care l-ai consumat la fiecare masa</string>
+    <string name="meals_title">Alimentație</string>
+    <string name="meals_addButton">Adauga mese</string>
+    <string name="meals_0kcal">0</string>
+    <string name="meals_breakfast">Mic Dejun (300 - 400 kcal)</string>
+    <string name="meals_launch">Prânz (500 - 700 kcal)</string>
+    <string name="meals_snacks">Gustări (200 - 400 kcal)</string>
+    <string name="meals_dinner">Cina (600 - 700 kcal)</string>
     <string-array name="profileGenres">
         <item>Masculin</item>
         <item>Feminin</item>
+        <item>Altul</item>
     </string-array>
 
 

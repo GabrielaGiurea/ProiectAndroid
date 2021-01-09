@@ -122,11 +122,19 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(ProfileActivity.this, "Profilul a fost actualizat cu succes!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent();
+                intent.putExtra("profile", profile);
+                setResult(200, intent);
+                finish();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(ProfileActivity.this, "Acutalizarea profilului a esuat", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent();
+                intent.putExtra("profile", profile);
+                setResult(200, intent);
+                finish();
             }
         });
     }
