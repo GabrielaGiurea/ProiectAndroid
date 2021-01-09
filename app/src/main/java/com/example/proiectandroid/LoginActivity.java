@@ -31,7 +31,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         login = (Button) findViewById(R.id.loginConnect);
         login.setOnClickListener(this);
     }
@@ -50,6 +49,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void userLogin() {
         emailField = (EditText) findViewById(R.id.loginEmail);
         passwordField = (EditText) findViewById(R.id.loginPassword);
+
+        emailField.setText("nicolae.gincota@gmail.com");
+        passwordField.setText("nicolae.gincota@gmail.com");
+
         String email = emailField.getText().toString();
         String password = passwordField.getText().toString();
 

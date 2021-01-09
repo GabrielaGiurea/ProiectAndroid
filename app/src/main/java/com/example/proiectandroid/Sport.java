@@ -1,18 +1,35 @@
 package com.example.proiectandroid;
 
 import java.io.Serializable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.PrimaryKey;
 
+
+@Entity(tableName = "SPORTS")
 public class Sport implements Serializable {
-    private float km;
-    private int steps;
-    private int min;
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "ID")
+    private int id;
 
-    public Sport() {
+    public int getId() {
+        return id;
     }
 
-    public Sport(float km, int steps, int min) {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @ColumnInfo(name = "KM")
+    private float km;
+
+    @ColumnInfo(name = "Min")
+    private int min;
+
+
+    public Sport(float km, int min) {
         this.km = km;
-        this.steps = steps;
         this.min = min;
     }
 
@@ -20,7 +37,6 @@ public class Sport implements Serializable {
     public String toString() {
         return "SportActivity{" +
                 "km=" + km +
-                ", steps=" + steps +
                 ", min=" + min +
                 '}';
     }
@@ -31,14 +47,6 @@ public class Sport implements Serializable {
 
     public void setKm(float km) {
         this.km = km;
-    }
-
-    public int getSteps() {
-        return steps;
-    }
-
-    public void setSteps(int steps) {
-        this.steps = steps;
     }
 
     public int getMin() {

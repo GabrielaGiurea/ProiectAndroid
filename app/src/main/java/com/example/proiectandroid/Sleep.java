@@ -1,62 +1,61 @@
 package com.example.proiectandroid;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.PrimaryKey;
+
 import java.io.Serializable;
+import java.util.Date;
 
+@Entity(tableName = "SLEEP")
 public class Sleep implements Serializable {
-    private int awake;
-    private int REM;
-    private int light;
-    private int deep;
 
-    public Sleep() {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "ID")
+    private  int id;
+    //Foreign key din tabela de legatura
+    //@ForeignKey(entity = User.class, parentColumns = "ID", childColumns = "USERID")
+    @ColumnInfo(name = "DateStart")
+    private String start;
+    @ColumnInfo(name = "DateStop")
+    private String stop;
+
+
+    public Sleep(String start, String stop) {
+        this.start = start;
+        this.stop = stop;
     }
 
-    public Sleep(int awake, int REM, int light, int deep) {
-        this.awake = awake;
-        this.REM = REM;
-        this.light = light;
-        this.deep = deep;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getStart() {
+        return start;
+    }
+
+    public void setStart(String start) {
+        this.start = start;
+    }
+
+    public String getStop() {
+        return stop;
+    }
+
+    public void setStop(String stop) {
+        this.stop = stop;
     }
 
     @Override
     public String toString() {
-        return "com.example.proiectandroid.Sleep{" +
-                "awake=" + awake +
-                ", REM=" + REM +
-                ", light=" + light +
-                ", deep=" + deep +
+        return "Sleep{" +
+                "start=" + start +
+                ", stop=" + stop +
                 '}';
-    }
-
-    public int getAwake() {
-        return awake;
-    }
-
-    public void setAwake(int awake) {
-        this.awake = awake;
-    }
-
-    public int getREM() {
-        return REM;
-    }
-
-    public void setREM(int REM) {
-        this.REM = REM;
-    }
-
-    public int getLight() {
-        return light;
-    }
-
-    public void setLight(int light) {
-        this.light = light;
-    }
-
-    public int getDeep() {
-        return deep;
-    }
-
-    public void setDeep(int deep) {
-        this.deep = deep;
     }
 }
